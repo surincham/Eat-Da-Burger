@@ -4,6 +4,7 @@ var router = express.Router();
 
 var burger = require("../models/burger.js");
 
+// module.export = function(app){
 router.get("/", function(req, res) {
     burger.all(function(data) {
         var hbsObject = {
@@ -43,5 +44,6 @@ router.delete("/api/burgers/:id", function(req, res) {
         }
     });
 });
+// }
 
 module.exports = router;
